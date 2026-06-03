@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Roblox Codes Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg:#060914; --surface:#0d1526; --surface2:#111d35;
+    --accent:#e94560; --accent2:#0f9b8e; --gold:#f5c518;
+    --text:#e8eaf6; --muted:#8892b0;
+    --border:rgba(233,69,96,0.2); --glow:0 0 20px rgba(233,69,96,0.4);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:'Rajdhani',sans-serif;min-height:100vh;overflow-x:hidden;}
+  body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(233,69,96,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(233,69,96,0.04) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;z-index:0;}
+  .orb{position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0;animation:drift 8s ease-in-out infinite alternate;}
+  .orb1{width:400px;height:400px;background:rgba(233,69,96,0.12);top:-100px;right:-100px;}
+  .orb2{width:300px;height:300px;background:rgba(15,155,142,0.1);bottom:-80px;left:-80px;animation-delay:3s;}
+  @keyframes drift{0%{transform:translate(0,0)}100%{transform:translate(30px,30px)}}
+  .container{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:40px 20px 80px;}
+  .header{text-align:center;margin-bottom:50px;}
+  .logo-badge{display:inline-block;background:linear-gradient(135deg,var(--accent),#c0392b);color:white;font-family:'Orbitron',monospace;font-size:11px;font-weight:700;letter-spacing:3px;padding:6px 16px;border-radius:2px;margin-bottom:20px;}
+  h1{font-family:'Orbitron',monospace;font-size:clamp(28px,6vw,56px);font-weight:900;line-height:1.1;letter-spacing:-1px;}
+  h1 .line1{color:var(--text);}
+  h1 .line2{background:linear-gradient(90deg,var(--accent),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .subtitle{margin-top:14px;color:var(--muted);font-size:16px;letter-spacing:1px;}
+  .loading-bar{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:28px;text-align:center;margin-bottom:30px;}
+  .spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 14px;}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .loading-label{font-family:'Orbitron',monospace;font-size:12px;letter-spacing:2px;color:var(--accent);}
+  .loading-sub{color:var(--muted);font-size:13px;margin-top:6px;}
+  .error-box{background:rgba(233,69,96,0.08);border:1px solid rgba(233,69,96,0.4);border-radius:10px;padding:24px;text-align:center;margin-bottom:30px;}
+  .err-icon{font-size:32px;margin-bottom:10px;}
+  .err-title{font-family:'Orbitron',monospace;font-size:14px;color:var(--accent);margin-bottom:6px;}
+  .err-desc{color:var(--muted);font-size:13px;line-height:1.6;}
+  .retry-btn{margin-top:14px;background:transparent;border:1px solid var(--accent);color:var(--accent);font-family:'Orbitron',monospace;font-size:11px;letter-spacing:1.5px;padding:8px 20px;border-radius:6px;cursor:pointer;transition:all 0.2s;}
+  .retry-btn:hover{background:var(--accent);color:white;}
+  .db-status{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:30px;}
+  .db-dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);animation:pulse 2s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+  .db-label{font-family:'Orbitron',monospace;font-size:11px;letter-spacing:2px;color:var(--accent2);}
+  .db-time{font-size:11px;color:var(--muted);}
+  .search-wrap{position:relative;margin-bottom:40px;}
+  .search-wrap input{width:100%;background:var(--surface);border:2px solid var(--border);border-radius:10px;padding:18px 60px 18px 24px;color:var(--text);font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:500;letter-spacing:0.5px;outline:none;transition:all 0.3s;}
+  .search-wrap input::placeholder{color:var(--muted);}
+  .search-wrap input:focus{border-color:var(--accent);box-shadow:var(--glow);background:var(--surface2);}
+  .search-icon{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--accent);pointer-events:none;}
+  .suggestions{position:absolute;top:calc(100% + 8px);left:0;right:0;background:var(--surface2);border:1px solid var(--border);border-radius:10px;overflow:hidden;z-index:100;box-shadow:0 20px 40px rgba(0,0,0,0.5);}
+  .suggestion-item{padding:14px 24px;cursor:pointer;font-size:16px;font-weight:500;letter-spacing:0.5px;transition:background 0.15s;border-bottom:1px solid rgba(255,255,255,0.04);}
+  .suggestion-item:last-child{border-bottom:none;}
+  .suggestion-item:hover{background:rgba(233,69,96,0.12);color:var(--accent);}
+  .results-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
+  .game-title{font-family:'Orbitron',monospace;font-size:22px;font-weight:700;color:var(--text);}
+  .game-title span{color:var(--accent);}
+  .code-count{background:rgba(233,69,96,0.15);border:1px solid var(--accent);color:var(--accent);font-family:'Orbitron',monospace;font-size:12px;padding:4px 12px;border-radius:20px;letter-spacing:1px;}
+  .codes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;}
+  .code-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;position:relative;overflow:hidden;transition:all 0.3s;animation:fadeUp 0.4s ease both;}
+  .code-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--gold));}
+  .code-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 12px 30px rgba(233,69,96,0.2);}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  .code-value{font-family:'Orbitron',monospace;font-size:15px;font-weight:700;color:var(--gold);letter-spacing:1px;margin-bottom:10px;word-break:break-all;}
+  .code-desc{color:var(--muted);font-size:14px;font-weight:500;margin-bottom:14px;line-height:1.4;}
+  .code-footer{display:flex;align-items:center;justify-content:space-between;}
+  .expiry{font-size:12px;color:var(--muted);letter-spacing:0.5px;}
+  .expiry.permanent{color:var(--accent2);}
+  .copy-btn{background:transparent;border:1px solid var(--accent);color:var(--accent);font-family:'Orbitron',monospace;font-size:10px;letter-spacing:1.5px;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all 0.2s;}
+  .copy-btn:hover{background:var(--accent);color:white;box-shadow:0 0 12px rgba(233,69,96,0.5);}
+  .copy-btn.copied{background:var(--accent2);border-color:var(--accent2);color:white;}
+  .empty-state{text-align:center;padding:60px 20px;color:var(--muted);}
+  .empty-icon{font-size:52px;margin-bottom:16px;opacity:0.5;}
+  .empty-title{font-family:'Orbitron',monospace;font-size:18px;margin-bottom:8px;color:var(--text);}
+  .empty-sub{font-size:14px;}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="container">
+  <div class="header">
+    <div class="logo-badge">🎮 Roblox Codes Hub</div>
+    <h1><div class="line1">Find Active</div><div class="line2">Redeem Codes</div></h1>
+    <p class="subtitle">Search any Roblox game — get instant working codes</p>
+  </div>
+  <div id="statusArea"></div>
+  <div id="searchArea" style="display:none">
+    <div class="db-status">
+      <div class="db-dot"></div>
+      <span class="db-label">Live Database</span>
+      <span class="db-time" id="lastUpdated"></span>
+    </div>
+    <div class="search-wrap" id="searchWrap">
+      <input type="text" id="searchInput" placeholder="Type a Roblox game name..." autocomplete="off"/>
+      <span class="search-icon">🔍</span>
+      <div class="suggestions" id="suggestions" style="display:none"></div>
+    </div>
+  </div>
+  <div id="results"></div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────
+//  YOUR GOOGLE SHEET ID (already set for you)
+// ─────────────────────────────────────────────
+const SHEET_ID = "1NqeO69eIobjomk34GrVLMIcIc-BwgH3Mr4XHD-ncYeU";
+// ─────────────────────────────────────────────
+
+let codesData = {}, gameNames = [];
+
+function csvUrl(id) {
+  return `https://docs.google.com/spreadsheets/d/${id}/export?format=csv&cachebust=${Date.now()}`;
+}
+
+function parseCSV(text) {
+  const lines = text.trim().split('\n');
+  const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g,''));
+  return lines.slice(1).map(line => {
+    const cols = line.match(/(".*?"|[^,]+)(?=,|$)/g) || [];
+    const obj = {};
+    headers.forEach((h, i) => { obj[h] = (cols[i] || '').trim().replace(/^"|"$/g,''); });
+    return obj;
+  });
+}
+
+async function loadSheet() {
+  document.getElementById('statusArea').innerHTML = `
+    <div class="loading-bar">
+      <div class="spinner"></div>
+      <div class="loading-label">Loading Codes Database</div>
+      <div class="loading-sub">Fetching latest data from Google Sheets...</div>
+    </div>`;
+
+  try {
+    const res = await fetch(csvUrl(SHEET_ID));
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const text = await res.text();
+    const rows = parseCSV(text);
+
+    codesData = {}; gameNames = [];
+    rows.forEach(row => {
+      const game = (row['Game Name'] || '').trim();
+      const code = (row['Code'] || '').trim();
+      if (!game || !code) return;
+      const key = game.toLowerCase();
+      if (!codesData[key]) { codesData[key] = { name: game, codes: [] }; gameNames.push(game); }
+      codesData[key].codes.push({
+        code,
+        desc: (row['Description'] || '').trim(),
+        expiry: (row['Expiry Date'] || '').trim()
+      });
+    });
+
+    document.getElementById('statusArea').innerHTML = '';
+    document.getElementById('searchArea').style.display = 'block';
+    document.getElementById('lastUpdated').textContent =
+      `· ${Object.keys(codesData).length} games · refreshed ${new Date().toLocaleTimeString()}`;
+
+  } catch(err) {
+    document.getElementById('statusArea').innerHTML = `
+      <div class="error-box">
+        <div class="err-icon">⚠️</div>
+        <div class="err-title">Could Not Load Database</div>
+        <div class="err-desc">
+          Make sure the Google Sheet is shared as <strong>"Anyone with the link"</strong>.<br/><br/>
+          Error: ${err.message}
+        </div>
+        <button class="retry-btn" onclick="loadSheet()">↺ RETRY</button>
+      </div>`;
+  }
+}
+
+setInterval(loadSheet, 5 * 60 * 1000);
+
+const searchInput = document.getElementById('searchInput');
+const suggestionsEl = document.getElementById('suggestions');
+const resultsEl = document.getElementById('results');
+
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.trim().toLowerCase();
+  if (!q) { hideSuggestions(); resultsEl.innerHTML=''; return; }
+  const matches = gameNames.filter(g => g.toLowerCase().includes(q));
+  if (!matches.length) { hideSuggestions(); return; }
+  suggestionsEl.innerHTML = matches.slice(0,8).map(g =>
+    `<div class="suggestion-item" data-game="${g}">${highlight(g,q)}</div>`
+  ).join('');
+  suggestionsEl.style.display = 'block';
+});
+
+suggestionsEl.addEventListener('click', e => {
+  const item = e.target.closest('.suggestion-item');
+  if (!item) return;
+  searchInput.value = item.dataset.game;
+  hideSuggestions(); showCodes(item.dataset.game);
+});
+
+searchInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const q = searchInput.value.trim().toLowerCase();
+    const m = gameNames.find(g => g.toLowerCase()===q) || gameNames.find(g => g.toLowerCase().includes(q));
+    if (m) { searchInput.value=m; hideSuggestions(); showCodes(m); }
+    else { hideSuggestions(); showNone(searchInput.value.trim()); }
+  }
+  if (e.key==='Escape') hideSuggestions();
+});
+
+document.addEventListener('click', e => {
+  if (document.getElementById('searchWrap') && !document.getElementById('searchWrap').contains(e.target)) hideSuggestions();
+});
+
+function hideSuggestions() { suggestionsEl.style.display='none'; }
+
+function highlight(name, q) {
+  const i = name.toLowerCase().indexOf(q);
+  if (i<0) return name;
+  return name.slice(0,i)+`<span style="color:var(--accent);font-weight:700">${name.slice(i,i+q.length)}</span>`+name.slice(i+q.length);
+}
+
+function showCodes(gameName) {
+  const entry = codesData[gameName.toLowerCase()];
+  if (!entry || !entry.codes.length) { showNone(gameName); return; }
+  const cards = entry.codes.map((c,i) => {
+    const isPerm = c.expiry.toLowerCase().includes('perm');
+    return `<div class="code-card" style="animation-delay:${i*0.07}s">
+      <div class="code-value">${c.code}</div>
+      <div class="code-desc">${c.desc || 'Redeem for rewards'}</div>
+      <div class="code-footer">
+        <span class="expiry ${isPerm?'permanent':''}">${isPerm?'♾️ Permanent':'⏳ '+c.expiry}</span>
+        <button class="copy-btn" onclick="copyCode(this,'${c.code.replace(/'/g,"\\'")}')">COPY</button>
+      </div>
+    </div>`;
+  }).join('');
+  resultsEl.innerHTML = `
+    <div class="results-header">
+      <div class="game-title">Codes for <span>${entry.name}</span></div>
+      <div class="code-count">${entry.codes.length} ACTIVE</div>
+    </div>
+    <div class="codes-grid">${cards}</div>`;
+}
+
+function showNone(name) {
+  resultsEl.innerHTML = `<div class="empty-state">
+    <div class="empty-icon">🔎</div>
+    <div class="empty-title">No codes found</div>
+    <div class="empty-sub">No active codes for "<strong>${name}</strong>" in the current database.</div>
+  </div>`;
+}
+
+function copyCode(btn, code) {
+  navigator.clipboard.writeText(code).then(() => {
+    btn.textContent='COPIED!'; btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='COPY';btn.classList.remove('copied');},2000);
+  });
+}
+
+loadSheet();
+</script>
+</body>
+</html>
