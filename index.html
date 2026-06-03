@@ -72,6 +72,10 @@
   .empty-icon{font-size:52px;margin-bottom:16px;opacity:0.5;}
   .empty-title{font-family:'Orbitron',monospace;font-size:18px;margin-bottom:8px;color:var(--text);}
   .empty-sub{font-size:14px;}
+  .site-nav{display:flex;justify-content:center;gap:10px;margin-bottom:28px;flex-wrap:wrap;}
+  .nav-link{display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);color:var(--muted);font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:1.5px;padding:8px 16px;border-radius:6px;text-decoration:none;transition:all 0.2s;}
+  .nav-link:hover{border-color:var(--accent2);color:var(--accent2);background:rgba(15,155,142,0.08);}
+  .nav-link.active{border-color:var(--accent);color:var(--accent);background:rgba(233,69,96,0.08);}
 </style>
 </head>
 <body>
@@ -82,6 +86,10 @@
     <div class="logo-badge">🎮 Roblox Codes Hub</div>
     <h1><div class="line1">Find Active</div><div class="line2">Redeem Codes</div></h1>
     <p class="subtitle">Search any Roblox game — get instant working codes</p>
+    <nav class="site-nav">
+      <a href="index.html" class="nav-link active">🏠 Codes Hub</a>
+      <a href="what-is-roblox.html" class="nav-link">📖 What is Roblox?</a>
+    </nav>
   </div>
   <div id="statusArea"></div>
   <div id="searchArea" style="display:none">
@@ -225,7 +233,7 @@ function showCodes(gameName) {
       <div class="code-value">${c.code}</div>
       <div class="code-desc">${c.desc || 'Redeem for rewards'}</div>
       <div class="code-footer">
-        <span class="expiry ${isPerm?'permanent':''}">${isPerm?'♾️ Permanent':'⏳ '+c.expiry}</span>
+        <span class="expiry ${isPerm?'permanent':''}>${isPerm?'♾️ Permanent':'⏳ '+c.expiry}</span>
         <button class="copy-btn" onclick="copyCode(this,'${c.code.replace(/'/g,"\\'")}')">COPY</button>
       </div>
     </div>`;
