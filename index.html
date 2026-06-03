@@ -76,6 +76,21 @@
   .nav-link{display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);color:var(--muted);font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:1.5px;padding:8px 16px;border-radius:6px;text-decoration:none;transition:all 0.2s;}
   .nav-link:hover{border-color:var(--accent2);color:var(--accent2);background:rgba(15,155,142,0.08);}
   .nav-link.active{border-color:var(--accent);color:var(--accent);background:rgba(233,69,96,0.08);}
+  .blog-section{margin-top:60px;padding-top:40px;border-top:1px solid rgba(233,69,96,0.15);}
+  .blog-heading{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+  .blog-heading-label{font-family:'Orbitron',monospace;font-size:13px;font-weight:700;letter-spacing:3px;color:var(--accent);text-transform:uppercase;}
+  .blog-heading-line{flex:1;height:1px;background:linear-gradient(to right,rgba(233,69,96,0.3),transparent);}
+  .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;}
+  .blog-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;display:block;transition:all 0.25s;position:relative;}
+  .blog-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent2),var(--gold));}
+  .blog-card:hover{border-color:var(--accent2);transform:translateY(-4px);box-shadow:0 14px 32px rgba(15,155,142,0.15);}
+  .blog-card-body{padding:20px;}
+  .blog-tag{display:inline-block;background:rgba(15,155,142,0.12);color:var(--accent2);border:1px solid rgba(15,155,142,0.25);font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:2px;padding:3px 10px;border-radius:20px;margin-bottom:12px;text-transform:uppercase;}
+  .blog-title{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:10px;}
+  .blog-desc{color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:16px;}
+  .blog-footer{display:flex;align-items:center;justify-content:space-between;}
+  .blog-meta{font-size:11px;color:var(--muted);letter-spacing:0.5px;}
+  .blog-read{font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(--accent2);display:flex;align-items:center;gap:4px;}
 </style>
 </head>
 <body>
@@ -88,7 +103,6 @@
     <p class="subtitle">Search any Roblox game — get instant working codes</p>
     <nav class="site-nav">
       <a href="index.html" class="nav-link active">🏠 Codes Hub</a>
-      <a href="what-is-roblox.html" class="nav-link">📖 What is Roblox?</a>
     </nav>
   </div>
   <div id="statusArea"></div>
@@ -105,6 +119,28 @@
     </div>
   </div>
   <div id="results"></div>
+
+  <!-- ── BLOG SECTION ── -->
+  <div class="blog-section">
+    <div class="blog-heading">
+      <span class="blog-heading-label">📝 Blogs</span>
+      <div class="blog-heading-line"></div>
+    </div>
+    <div class="blog-grid">
+      <a href="what-is-roblox.html" class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-tag">Platform Guide</span>
+          <div class="blog-title">What is Roblox? The Complete Guide (2026)</div>
+          <div class="blog-desc">From a school science project to a 150-million-user digital universe — everything you need to know about Roblox in 2026.</div>
+          <div class="blog-footer">
+            <span class="blog-meta">📅 June 2026 &nbsp;·&nbsp; ⏱ 20 min read</span>
+            <span class="blog-read">READ →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
 </div>
 
 <script>
