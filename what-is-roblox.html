@@ -6,7 +6,7 @@
 <title>What is Roblox Platform? The Complete Guide (2026)</title>
 <meta name="description" content="The ultimate guide to the Roblox platform — what it is, how it works, its economy, safety features, AI tools, and everything you need to know in 2026." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root {
     --bg: #0d0f14;
@@ -20,8 +20,8 @@
     --text: #e8eaf0;
     --text-muted: #8892a4;
     --text-faint: #555e72;
-    --heading-font: 'Syne', sans-serif;
-    --body-font: 'DM Sans', sans-serif;
+    --heading-font: 'Plus Jakarta Sans', sans-serif;
+    --body-font: 'Nunito', sans-serif;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,13 +35,13 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ── Site Nav ── */
+  /* NAV */
   .site-nav-bar {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 16px 24px;
-    background: rgba(13,15,20,0.9);
+    padding: 14px 24px;
+    background: rgba(13,15,20,0.92);
     border-bottom: 1px solid #252a38;
     flex-wrap: wrap;
     position: sticky;
@@ -56,19 +56,19 @@
     background: #151820;
     border: 1px solid #252a38;
     color: #8892a4;
-    font-family: 'Syne', sans-serif;
-    font-size: 11px;
+    font-family: var(--heading-font);
+    font-size: 13px;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    padding: 8px 16px;
-    border-radius: 6px;
+    letter-spacing: 0.04em;
+    padding: 9px 18px;
+    border-radius: 8px;
     text-decoration: none;
     transition: all 0.2s;
   }
   .nav-link:hover { border-color: #4fd1c5; color: #4fd1c5; background: rgba(79,209,197,0.08); }
   .nav-link.active { border-color: #ff3d5a; color: #ff3d5a; background: rgba(255,61,90,0.08); }
 
-  /* ── Hero ── */
+  /* HERO */
   .hero {
     position: relative;
     overflow: hidden;
@@ -94,17 +94,17 @@
     font-family: var(--heading-font);
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: .12em;
+    letter-spacing: .08em;
     text-transform: uppercase;
     padding: 5px 16px;
     margin-bottom: 22px;
   }
   .hero h1 {
     font-family: var(--heading-font);
-    font-size: clamp(32px, 6vw, 64px);
+    font-size: clamp(28px, 4.5vw, 52px);
     font-weight: 800;
-    line-height: 1.08;
-    letter-spacing: -.02em;
+    line-height: 1.12;
+    letter-spacing: -.01em;
     max-width: 820px;
     margin: 0 auto 20px;
   }
@@ -118,13 +118,13 @@
     gap: 18px;
     flex-wrap: wrap;
     margin-top: 12px;
+    font-family: var(--body-font);
   }
-  .hero-meta span { display: flex; align-items: center; gap: 6px; }
 
-  /* ── Layout ── */
+  /* LAYOUT */
   .wrapper { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
 
-  /* ── TOC ── */
+  /* TOC */
   .toc {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -133,22 +133,37 @@
     padding: 28px 32px;
     margin: 48px 0;
   }
-  .toc-title { font-family: var(--heading-font); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); margin-bottom: 16px; }
+  .toc-title { font-family: var(--heading-font); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: 16px; }
   .toc ol { padding-left: 20px; }
   .toc li { margin: 7px 0; }
-  .toc a { color: var(--text-muted); text-decoration: none; font-size: 15px; transition: color .2s; }
+  .toc a { color: var(--text-muted); text-decoration: none; font-size: 15px; transition: color .2s; font-family: var(--body-font); }
   .toc a:hover { color: var(--accent2); }
 
-  /* ── Sections ── */
+  /* SECTIONS */
   .section { margin: 60px 0; }
-  h2 { font-family: var(--heading-font); font-size: clamp(22px, 4vw, 32px); font-weight: 800; letter-spacing: -.02em; margin-bottom: 18px; line-height: 1.15; scroll-margin-top: 70px; }
+  h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(20px, 3vw, 27px);
+    font-weight: 800;
+    letter-spacing: -.01em;
+    margin-bottom: 18px;
+    line-height: 1.2;
+    scroll-margin-top: 70px;
+  }
   h2 .emoji { margin-right: 10px; font-style: normal; }
-  h3 { font-family: var(--heading-font); font-size: 20px; font-weight: 700; margin: 32px 0 12px; color: var(--accent2); }
-  p { margin-bottom: 18px; color: var(--text); }
+  h3 {
+    font-family: var(--heading-font);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 32px 0 12px;
+    color: var(--accent2);
+    letter-spacing: 0em;
+  }
+  p { margin-bottom: 18px; color: var(--text); font-family: var(--body-font); font-size: 16px; line-height: 1.8; }
   strong { color: #fff; font-weight: 600; }
 
-  /* ── Callout boxes ── */
-  .callout { border-radius: 12px; padding: 20px 24px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; font-size: 15.5px; line-height: 1.65; }
+  /* CALLOUT BOXES */
+  .callout { border-radius: 12px; padding: 20px 24px; margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; font-size: 15.5px; line-height: 1.65; font-family: var(--body-font); }
   .callout-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
   .callout.info { background: rgba(79,209,197,.08); border: 1px solid rgba(79,209,197,.25); }
   .callout.warning { background: rgba(246,173,85,.08); border: 1px solid rgba(246,173,85,.25); }
@@ -156,19 +171,19 @@
   .callout.danger { background: rgba(255,61,90,.08); border: 1px solid rgba(255,61,90,.25); }
   .callout.success { background: rgba(72,199,142,.08); border: 1px solid rgba(72,199,142,.25); }
 
-  /* ── Stats grid ── */
+  /* STATS GRID */
   .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; margin: 32px 0; }
   .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 18px; text-align: center; transition: border-color .25s, transform .25s; }
   .stat-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-  .stat-number { font-family: var(--heading-font); font-size: 28px; font-weight: 800; line-height: 1.1; margin-bottom: 6px; }
-  .stat-label { font-size: 13px; color: var(--text-muted); line-height: 1.4; }
+  .stat-number { font-family: var(--heading-font); font-size: 26px; font-weight: 800; line-height: 1.1; margin-bottom: 6px; }
+  .stat-label { font-size: 13px; color: var(--text-muted); line-height: 1.4; font-family: var(--body-font); }
 
-  /* ── Tables ── */
+  /* TABLES */
   .table-wrap { overflow-x: auto; margin: 28px 0; border-radius: 12px; border: 1px solid var(--border); }
-  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; font-family: var(--body-font); }
   thead { background: var(--surface2); }
-  th { font-family: var(--heading-font); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border); }
-  td { padding: 13px 18px; border-bottom: 1px solid var(--border); color: var(--text); }
+  th { font-family: var(--heading-font); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border); }
+  td { padding: 13px 18px; border-bottom: 1px solid var(--border); color: var(--text); font-size: 15px; line-height: 1.6; }
   tr:last-child td { border-bottom: none; }
   tbody tr:hover { background: rgba(255,255,255,.03); }
   .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; font-family: var(--heading-font); }
@@ -178,80 +193,78 @@
   .badge-blue { background: rgba(79,209,197,.15); color: var(--accent2); border: 1px solid rgba(79,209,197,.3); }
   .badge-purple { background: rgba(167,139,250,.15); color: var(--accent4); border: 1px solid rgba(167,139,250,.3); }
 
-  /* ── Feature cards ── */
+  /* FEATURE CARDS */
   .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin: 28px 0; }
   .feature-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px 20px; transition: border-color .25s, transform .2s; }
   .feature-card:hover { border-color: var(--accent2); transform: translateY(-3px); }
   .feature-icon { font-size: 28px; margin-bottom: 12px; display: block; }
   .feature-title { font-family: var(--heading-font); font-size: 16px; font-weight: 700; margin-bottom: 8px; }
-  .feature-desc { font-size: 14.5px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+  .feature-desc { font-size: 14.5px; color: var(--text-muted); line-height: 1.65; margin: 0; font-family: var(--body-font); }
 
-  /* ── Timeline ── */
+  /* TIMELINE */
   .timeline { margin: 28px 0; position: relative; padding-left: 24px; }
   .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(to bottom, var(--accent), var(--accent2), var(--accent4)); border-radius: 2px; }
   .timeline-item { margin-bottom: 28px; position: relative; }
   .timeline-dot { position: absolute; left: -29px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); }
-  .timeline-year { font-family: var(--heading-font); font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
-  .timeline-desc { font-size: 15px; color: var(--text-muted); }
+  .timeline-year { font-family: var(--heading-font); font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+  .timeline-desc { font-size: 15px; color: var(--text-muted); font-family: var(--body-font); line-height: 1.7; }
   .timeline-desc strong { color: var(--text); }
 
-  /* ── Section divider ── */
+  /* DIVIDER */
   .section-divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 56px 0; }
 
-  /* ── Highlight strip ── */
+  /* HIGHLIGHT STRIP */
   .highlight-strip { background: linear-gradient(135deg, rgba(255,61,90,.12) 0%, rgba(79,209,197,.08) 100%); border: 1px solid rgba(255,61,90,.2); border-radius: 14px; padding: 28px 30px; margin: 32px 0; }
   .highlight-strip h3 { color: var(--accent); margin-top: 0; }
+  .highlight-strip p { font-size: 15.5px; }
 
-  /* ── FAQ ── */
+  /* FAQ */
   .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; margin: 14px 0; }
   .faq-q { font-family: var(--heading-font); font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
-  .faq-a { font-size: 15px; color: var(--text-muted); margin: 0; line-height: 1.65; }
+  .faq-a { font-size: 15px; color: var(--text-muted); margin: 0; line-height: 1.7; font-family: var(--body-font); }
 
-  /* ── Conclusion box ── */
+  /* CONCLUSION */
   .conclusion { background: linear-gradient(135deg, var(--surface2) 0%, rgba(79,209,197,.07) 100%); border: 1px solid var(--accent2); border-radius: 16px; padding: 36px 34px; margin: 48px 0 0; text-align: center; }
   .conclusion h2 { color: var(--accent2); margin-bottom: 16px; }
 
-  /* ── Inline accent text ── */
+  /* INLINE ACCENTS */
   .accent-red { color: var(--accent); }
   .accent-teal { color: var(--accent2); }
   .accent-yellow { color: var(--accent3); }
   .accent-purple { color: var(--accent4); }
 
-  /* ── Responsive ── */
+  /* RESPONSIVE */
   @media (max-width: 600px) {
     .hero { padding: 60px 16px 40px; }
     .wrapper { padding: 0 16px 60px; }
     .toc { padding: 22px 20px; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .site-nav-bar { padding: 12px 16px; }
   }
 </style>
 </head>
 <body>
 
-<!-- ═══════════════ SITE NAV ═══════════════ -->
 <nav class="site-nav-bar">
-  <a href="index.html" class="nav-link">🏠 Codes Hub</a>
-  <a href="what-is-roblox.html" class="nav-link active">📖 What is Roblox?</a>
+  <a href="index.html" class="nav-link">Homepage</a>
+  <a href="what-is-roblox.html" class="nav-link active">What is Roblox?</a>
 </nav>
 
-<!-- ═══════════════ HERO ═══════════════ -->
 <div class="hero">
-  <div class="hero-tag">🎮 Complete Platform Guide · 2026</div>
+  <div class="hero-tag">Complete Platform Guide · 2026</div>
   <h1>What is <span>Roblox</span>?<br>The Platform That Changed Gaming</h1>
-  <p style="max-width:620px;margin:0 auto 14px;color:#8892a4;font-size:17px;">From a school science project to a 150-million-user digital universe — here is everything you need to know about the world's most ambitious gaming platform.</p>
+  <p style="max-width:620px;margin:0 auto 14px;color:#8892a4;font-size:17px;font-family:'Nunito',sans-serif;line-height:1.75;">From a school science project to a 150-million-user digital universe. Here is everything you need to know about the world's most ambitious gaming platform.</p>
   <div class="hero-meta">
-    <span>📅 Updated June 2026</span>
-    <span>⏱ ~20 min read</span>
-    <span>✍️ Deep-research guide</span>
+    <span>Updated June 2026</span>
+    <span>~20 min read</span>
+    <span>Deep-research guide</span>
   </div>
 </div>
 
-<!-- ═══════════════ MAIN CONTENT ═══════════════ -->
 <div class="wrapper">
 
-  <!-- TOC -->
   <nav class="toc">
-    <div class="toc-title">📋 Table of Contents</div>
+    <div class="toc-title">Table of Contents</div>
     <ol>
       <li><a href="#what-is-roblox">What Is Roblox? The Simple Answer</a></li>
       <li><a href="#history">The History of Roblox: From DynaBlocks to Global Phenomenon</a></li>
@@ -275,7 +288,7 @@
       <span class="callout-icon">💡</span>
       <div><strong>Key Insight:</strong> Roblox is often described as a "metaverse" — a persistent, shared digital space where people play, socialize, create, and transact. It is, by most measurable definitions, the closest thing to a working metaverse that currently exists at consumer scale.</div>
     </div>
-    <p>Founded in 2004 and publicly launched in 2006, Roblox has grown from a niche game-builder used by a few thousand school kids into one of the most staggering success stories in the history of technology. As of 2026, more than <strong>150 million people</strong> log in every single day. That is more daily users than Netflix, Spotify, or Twitter. More than 50% of American children under 16 play on Roblox at least once per month. The platform now hosts over 44 million distinct games and experiences, collectively racking up more than <strong>124 billion hours</strong> of player engagement — a record that continues into 2026.</p>
+    <p>Founded in 2004 and publicly launched in 2006, Roblox has grown from a niche game-builder used by a few thousand school kids into one of the most staggering success stories in the history of technology. As of 2026, more than <strong>150 million people</strong> log in every single day. The platform now hosts over 44 million distinct games and experiences, collectively racking up more than <strong>124 billion hours</strong> of player engagement.</p>
     <div class="stats-grid">
       <div class="stat-card"><div class="stat-number accent-red">150M+</div><div class="stat-label">Daily Active Users (Q1 2026)</div></div>
       <div class="stat-card"><div class="stat-number accent-teal">380M</div><div class="stat-label">Monthly Active Users (2026)</div></div>
@@ -284,7 +297,7 @@
       <div class="stat-card"><div class="stat-number accent-teal">$1.5B</div><div class="stat-label">Paid to Creators (2025 Record)</div></div>
       <div class="stat-card"><div class="stat-number accent-red">124B</div><div class="stat-label">Hours Engaged (Full Year)</div></div>
     </div>
-    <p>What makes Roblox genuinely unusual is its audience composition. Unlike most major gaming platforms dominated by adults, approximately 40% of Roblox users are between ages 9 and 17. Yet the adult demographic is growing fast — over the past two years Roblox has deliberately expanded features, content ratings, and social tools to attract older users, and it is working. The platform's fastest-growing segment through early 2026 remains users aged 17 to 24.</p>
+    <p>What makes Roblox genuinely unusual is its audience composition. Unlike most major gaming platforms dominated by adults, approximately 40% of Roblox users are between ages 9 and 17. Yet the adult demographic is growing fast. The platform's fastest-growing segment through early 2026 remains users aged 17 to 24.</p>
   </div>
 
   <div class="section-divider"></div>
@@ -298,8 +311,8 @@
       <div class="timeline-item"><div class="timeline-dot" style="background:var(--accent2);"></div><div class="timeline-year">2009 — Virtual Currency Arrives</div><div class="timeline-desc"><strong>Robux</strong> is introduced as the platform's official virtual currency, replacing the earlier Tickets system over the following years. This is the seed of the multi-billion-dollar economy that would grow around it.</div></div>
       <div class="timeline-item"><div class="timeline-dot" style="background:var(--accent4);"></div><div class="timeline-year">2013 — Mobile Expansion</div><div class="timeline-desc">Roblox launches on iOS and Android, massively expanding its accessible audience. Mobile would eventually become the dominant platform for new user acquisition, particularly in emerging markets.</div></div>
       <div class="timeline-item"><div class="timeline-dot" style="background:var(--accent);"></div><div class="timeline-year">2016 — Creators Start Earning Real Money</div><div class="timeline-desc">The <strong>Developer Exchange (DevEx)</strong> program is formalized, allowing top creators to convert earned Robux into real-world cash. For the first time, building on Roblox is a viable career path.</div></div>
-      <div class="timeline-item"><div class="timeline-dot" style="background:var(--accent3);"></div><div class="timeline-year">2019 — 100 Million Monthly Users</div><div class="timeline-desc">Roblox crosses 100 million monthly active users, cementing its status as one of the world's largest gaming platforms. The community and its catalogue of games are now truly massive.</div></div>
-      <div class="timeline-item"><div class="timeline-dot" style="background:var(--accent2);"></div><div class="timeline-year">2020–2021 — The Pandemic Explosion</div><div class="timeline-desc">COVID-19 lockdowns send usage through the roof. Roblox becomes the default social hangout for millions of children worldwide. The company goes public via a direct listing on the <strong>New York Stock Exchange (NYSE: RBLX)</strong> in March 2021, valued at roughly $45 billion on its first day.</div></div>
+      <div class="timeline-item"><div class="timeline-dot" style="background:var(--accent3);"></div><div class="timeline-year">2019 — 100 Million Monthly Users</div><div class="timeline-desc">Roblox crosses 100 million monthly active users, cementing its status as one of the world's largest gaming platforms.</div></div>
+      <div class="timeline-item"><div class="timeline-dot" style="background:var(--accent2);"></div><div class="timeline-year">2020–2021 — The Pandemic Explosion</div><div class="timeline-desc">COVID-19 lockdowns send usage through the roof. The company goes public via a direct listing on the <strong>New York Stock Exchange (NYSE: RBLX)</strong> in March 2021, valued at roughly $45 billion on its first day.</div></div>
       <div class="timeline-item"><div class="timeline-dot" style="background:var(--accent4);"></div><div class="timeline-year">2024–2025 — The AI Era Begins</div><div class="timeline-desc">Roblox launches <strong>Roblox Cube</strong>, its generative AI system for creating 3D and 4D game objects from text prompts. Daily active users surpass 150 million. Creator earnings cross $1.5 billion in a single year for the first time.</div></div>
     </div>
     <div class="callout tip">
@@ -314,19 +327,19 @@
     <h2><span class="emoji">⚙️</span>How the Roblox Platform Actually Works</h2>
     <p>Understanding Roblox means understanding its three-layer structure: the <strong>platform layer</strong> (what players see and interact with), the <strong>creation layer</strong> (how games are built), and the <strong>economy layer</strong> (how money flows). Each layer is deeply interconnected, and Roblox's genius is that all three reinforce one another.</p>
     <h3>The Player Experience</h3>
-    <p>When a new user downloads Roblox — for free, on virtually any device — they land on the homepage, which functions like a personalized app store for games. An algorithm surfaces experiences based on what is trending, what friends are playing, and the user's own play history. Players create a customizable avatar, a digital representation of themselves, and use that avatar across every game they visit. There is no separate account per game. Everything lives under one profile.</p>
-    <p>Inside a game, the experience varies enormously. Roblox games range from meticulously designed role-playing worlds (like the juggernaut <em>Brookhaven RP</em>) to frantic obby (obstacle course) speed challenges, anime-inspired fighting games, farming simulators, horror experiences, and everything in between. Some games have production values that rival professionally developed mobile titles. Others are charming, chaotic experiments made by teenagers on a Saturday afternoon. Both exist in the same catalogue.</p>
+    <p>When a new user downloads Roblox — for free, on virtually any device — they land on the homepage, which functions like a personalized app store for games. An algorithm surfaces experiences based on what is trending, what friends are playing, and the user's own play history. Players create a customizable avatar and use that avatar across every game they visit. There is no separate account per game. Everything lives under one profile.</p>
+    <p>Inside a game, the experience varies enormously. Roblox games range from meticulously designed role-playing worlds like <em>Brookhaven RP</em> to frantic obstacle courses, anime-inspired fighting games, farming simulators, horror experiences, and everything in between. Some games have production values that rival professionally developed mobile titles. Others are charming, chaotic experiments made by teenagers on a Saturday afternoon.</p>
     <div class="callout warning">
       <span class="callout-icon">⚠️</span>
       <div><strong>Important Context:</strong> Roblox does not directly create the games on its platform. With the exception of a handful of internal demo experiences, every single game is made by a member of the community. Roblox provides the engine, the infrastructure, the monetization tools, and the audience. Creators supply the content.</div>
     </div>
     <h3>The Social Layer</h3>
-    <p>Roblox is intensely social. Players can follow friends, join servers together, communicate via in-game chat, and in age-appropriate contexts, use spatial voice chat to speak with each other in real time. The social dimension is arguably the platform's strongest retention driver — users don't just return for the games, they return to hang out with specific friends inside those games. This distinction sets Roblox apart from virtually every other platform in gaming.</p>
+    <p>Roblox is intensely social. Players can follow friends, join servers together, communicate via in-game chat, and in age-appropriate contexts, use spatial voice chat to speak with each other in real time. The social dimension is arguably the platform's strongest retention driver. Users do not just return for the games; they return to hang out with specific friends inside those games.</p>
     <div class="feature-grid">
       <div class="feature-card"><span class="feature-icon">👥</span><div class="feature-title">Friend System</div><p class="feature-desc">Follow and friend other players, see what they are playing, and join their sessions with one click.</p></div>
       <div class="feature-card"><span class="feature-icon">💬</span><div class="feature-title">In-Game Chat</div><p class="feature-desc">Text chat filtered by AI and age-appropriate settings; spatial voice chat available for verified users over 13.</p></div>
       <div class="feature-card"><span class="feature-icon">🛒</span><div class="feature-title">Avatar Marketplace</div><p class="feature-desc">Millions of avatar items — clothing, accessories, animations — created by Roblox and the community alike.</p></div>
-      <div class="feature-card"><span class="feature-icon">🏆</span><div class="feature-title">Groups</div><p class="feature-desc">Players can form or join Groups — from fan clubs to full game-development studios — that share Robux earnings and governance.</p></div>
+      <div class="feature-card"><span class="feature-icon">🏆</span><div class="feature-title">Groups</div><p class="feature-desc">Players can form or join Groups, from fan clubs to full game-development studios, that share Robux earnings and governance.</p></div>
     </div>
   </div>
 
@@ -335,7 +348,7 @@
   <div class="section" id="roblox-studio">
     <h2><span class="emoji">🛠️</span>Roblox Studio: Where Creators Build Everything</h2>
     <p>Roblox Studio is the free game development application that runs alongside the main client. It is the single most important reason why Roblox has 44 million games and its nearest competitor does not. Studio is designed to be approachable enough for a 10-year-old discovering programming for the first time, yet deep enough to support full-time professional studios shipping games that earn millions of dollars per year.</p>
-    <p>The interface is a real-time 3D editor built around <strong>Luau</strong>, Roblox's scripting language (a modified version of Lua with type-checking and performance improvements). Developers place parts, models, and meshes into a virtual workspace, attach behaviors through scripts, and test the result instantly without leaving the application. Publishing a finished game to the platform is a single button click — and it becomes available to every player on every device simultaneously.</p>
+    <p>The interface is a real-time 3D editor built around <strong>Luau</strong>, Roblox's scripting language, a modified version of Lua with type-checking and performance improvements. Developers place parts, models, and meshes into a virtual workspace, attach behaviors through scripts, and test the result instantly. Publishing a finished game to the platform is a single button click, and it becomes available to every player on every device simultaneously.</p>
     <h3>Key Studio Features in 2025–2026</h3>
     <div class="table-wrap">
       <table>
@@ -348,7 +361,7 @@
           <tr><td><strong>Real-Time Translation API</strong></td><td>Automatically translates in-experience UI text into players' native languages at runtime</td><td><span class="badge badge-green">Live</span></td></tr>
           <tr><td><strong>Collaborative Studio</strong></td><td>Multiple developers edit the same project simultaneously, similar to Google Docs for game dev</td><td><span class="badge badge-green">Live</span></td></tr>
           <tr><td><strong>Avatar Auto-Setup</strong></td><td>AI-powered rigging system that converts imported character meshes into fully animatable Roblox avatars</td><td><span class="badge badge-green">Live</span></td></tr>
-          <tr><td><strong>MCP Integration</strong></td><td>Studio connects to external AI tools (Claude, Cursor, Codex) via Model Context Protocol</td><td><span class="badge badge-blue">Coming Soon</span></td></tr>
+          <tr><td><strong>MCP Integration</strong></td><td>Studio connects to external AI tools via Model Context Protocol</td><td><span class="badge badge-blue">Coming Soon</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -356,16 +369,16 @@
       <span class="callout-icon">🤖</span>
       <div><strong>The AI Revolution in Game Making:</strong> Roblox's agentic AI system can now plan a game, build assets, run playtests, read output logs, and fix bugs — autonomously. During early access of the Cube Mesh Generation API alone, creators generated over <strong>160,000 objects</strong>, and games using generated assets saw a 64% increase in average player time.</div>
     </div>
-    <p>The practical implication of Studio's AI direction is profound. Building a complete game used to require months of 3D modeling, coding, and testing. With Roblox's current toolset, a solo developer can prototype a working game in hours. Roblox's long-term vision — publicly stated at multiple developer conferences — is that any person should be able to describe a game in plain language and have AI produce a functional, playable experience. That vision is closer to reality in 2026 than most people realize.</p>
+    <p>The practical implication of Studio's AI direction is profound. Building a complete game used to require months of 3D modeling, coding, and testing. With Roblox's current toolset, a solo developer can prototype a working game in hours. Roblox's long-term vision is that any person should be able to describe a game in plain language and have AI produce a functional, playable experience. That vision is closer to reality in 2026 than most people realize.</p>
   </div>
 
   <div class="section-divider"></div>
 
   <div class="section" id="robux">
     <h2><span class="emoji">💎</span>Robux: The Currency That Powers the Platform</h2>
-    <p>Robux (stylized as R$) is the official virtual currency of Roblox. It sits at the center of everything commercial on the platform — from buying a hat for your avatar to unlocking a premium game mode to funding a developer's full-time career. Understanding Robux means understanding the economic engine that makes Roblox function.</p>
+    <p>Robux (stylized as R$) is the official virtual currency of Roblox. It sits at the center of everything commercial on the platform, from buying a hat for your avatar to unlocking a premium game mode to funding a developer's full-time career.</p>
     <h3>How Players Get Robux</h3>
-    <p>The primary way to acquire Robux is to purchase them directly through the Roblox app or website. Roblox offers several bundle sizes, with the exchange rate generally around <strong>$1 USD per 80 Robux</strong>. Players can also subscribe to <strong>Roblox Premium</strong>, a monthly membership that grants a monthly Robux stipend, a 10% bonus on Robux purchases, and access to the Premium Marketplace for limited items. Additionally, creators can earn Robux when other players purchase their games, game passes, in-game items, or when they sell UGC (User-Generated Content) clothing and accessories on the Avatar Marketplace.</p>
+    <p>The primary way to acquire Robux is to purchase them directly through the Roblox app or website. The exchange rate is generally around <strong>$1 USD per 80 Robux</strong>. Players can also subscribe to <strong>Roblox Premium</strong>, a monthly membership that grants a monthly Robux stipend, a 10% bonus on Robux purchases, and access to the Premium Marketplace. Additionally, creators can earn Robux when other players purchase their games, game passes, or in-game items.</p>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Way to Get Robux</th><th>Who It's For</th><th>Notes</th></tr></thead>
@@ -375,32 +388,32 @@
           <tr><td><strong>Game Passes &amp; Developer Products</strong></td><td>Game creators</td><td>Robux earned when players buy in-game items</td></tr>
           <tr><td><strong>UGC Avatar Items</strong></td><td>Approved UGC creators</td><td>Sell clothing and accessories to other users</td></tr>
           <tr><td><strong>Group Payouts</strong></td><td>Group owners</td><td>Distribute earned Robux to group members</td></tr>
-          <tr><td><strong>Affiliate Program</strong></td><td>Creators/Influencers</td><td>Earn Robux when users join games via referral links</td></tr>
+          <tr><td><strong>Affiliate Program</strong></td><td>Creators and influencers</td><td>Earn Robux when users join games via referral links</td></tr>
         </tbody>
       </table>
     </div>
     <h3>How Players Spend Robux</h3>
-    <p>On the spending side, Robux is used to buy <strong>avatar cosmetics</strong> (clothing, accessories, faces, animations), <strong>game passes</strong> (permanent upgrades in specific games), <strong>developer products</strong> (consumable in-game items), and access to certain <strong>premium experiences</strong> that charge entry fees. In 2025 alone, Roblox users spent a combined <strong>$6.79 billion in Robux purchases</strong>, making it one of the largest virtual currency economies in the world.</p>
+    <p>On the spending side, Robux is used to buy <strong>avatar cosmetics</strong>, <strong>game passes</strong>, <strong>developer products</strong>, and access to certain <strong>premium experiences</strong>. In 2025 alone, Roblox users spent a combined <strong>$6.79 billion in Robux purchases</strong>, making it one of the largest virtual currency economies in the world.</p>
     <div class="highlight-strip">
-      <h3>⚠️ The Robux Scam Warning Every Player Should Know</h3>
-      <p>There is no legitimate way to get "free Robux" outside of earning them through creating games, selling UGC items, or receiving gifts. Any website, video, or tool claiming to generate free Robux is a scam — typically designed to steal account credentials or run phishing attacks. Roblox does not endorse any third-party Robux generators and cannot restore accounts compromised by using them. Always get Robux through official channels: the Roblox website, app, or authorized gift card retailers.</p>
+      <h3>The Robux Scam Warning Every Player Should Know</h3>
+      <p>There is no legitimate way to get "free Robux" outside of earning them through creating games, selling UGC items, or receiving gifts. Any website, video, or tool claiming to generate free Robux is a scam, typically designed to steal account credentials or run phishing attacks. Roblox cannot restore accounts compromised by using them. Always get Robux through official channels only.</p>
     </div>
     <h3>Converting Robux to Real Money</h3>
-    <p>This is where Roblox's economics become genuinely interesting. Through the <strong>Developer Exchange Program (DevEx)</strong>, creators who have accumulated enough <em>earned</em> Robux (a minimum of 30,000) can convert them into real-world money. The exchange rate as of 2026 is roughly <strong>$0.0035 to $0.0038 per Robux</strong>, which means 100,000 earned Robux converts to approximately $350 USD. In late 2025, Roblox increased the DevEx rate by 8.5% — the most direct benefit to creators the platform had offered in years. Over 23,500 creators participated in the DevEx program in 2025, a number growing into 2026, with the median DevEx participant earning $1,440 USD over a 12-month period.</p>
+    <p>Through the <strong>Developer Exchange Program (DevEx)</strong>, creators who have accumulated enough earned Robux can convert them into real-world money. The exchange rate as of 2026 is roughly <strong>$0.0035 to $0.0038 per Robux</strong>, meaning 100,000 earned Robux converts to approximately $350 USD. In late 2025, Roblox increased the DevEx rate by 8.5%. Over 23,500 creators participated in the DevEx program in 2025, with the median participant earning $1,440 USD over a 12-month period.</p>
   </div>
 
   <div class="section-divider"></div>
 
   <div class="section" id="developer-economy">
     <h2><span class="emoji">💰</span>The Roblox Developer Economy in 2026</h2>
-    <p>The numbers around Roblox's creator economy have crossed a threshold where they demand serious attention from the broader gaming industry. Through 2025 and into 2026, Roblox paid out more than <strong>$1.5 billion</strong> to its creator community — up from $923 million in 2024 and $741 million in 2023. That is year-over-year growth of over 60%. For context, some mid-sized game publishers have annual revenues lower than what Roblox distributes to independent creators.</p>
-    <p>The platform itself posted <strong>$4.9 billion in revenue</strong> for full-year 2025 — a 36% jump from 2024 — with growth continuing in 2026. The company has set a public goal of capturing 10% of all gaming market content revenue globally — and based on current trajectory, that goal is not as far-fetched as it would have seemed three years ago.</p>
+    <p>Through 2025 and into 2026, Roblox paid out more than <strong>$1.5 billion</strong> to its creator community, up from $923 million in 2024 and $741 million in 2023. That is year-over-year growth of over 60%. For context, some mid-sized game publishers have annual revenues lower than what Roblox distributes to independent creators.</p>
+    <p>The platform itself posted <strong>$4.9 billion in revenue</strong> for full-year 2025, a 36% jump from 2024, with growth continuing in 2026.</p>
     <div class="callout success">
       <span class="callout-icon">🚀</span>
-      <div><strong>Top Creator Earnings:</strong> The top 100 developers on Roblox averaged $6 million in earnings each in the past year. The top 1,000 averaged $1.3 million each. Several studios have grown from solo hobbyist projects into teams of dozens, functioning like fully professional indie game studios that distribute their work exclusively through Roblox.</div>
+      <div><strong>Top Creator Earnings:</strong> The top 100 developers on Roblox averaged $6 million in earnings each in the past year. The top 1,000 averaged $1.3 million each. Several studios have grown from solo hobbyist projects into teams of dozens, functioning like fully professional indie game studios.</div>
     </div>
     <h3>How the Revenue Split Works</h3>
-    <p>When a player spends Robux inside a game, the money does not all go to the creator. Roblox takes a significant share to cover platform infrastructure, payment processing, and company operations. Here is a simplified breakdown of where each Robux dollar generally goes:</p>
+    <p>When a player spends Robux inside a game, the money does not all go to the creator. Roblox takes a significant share to cover platform infrastructure, payment processing, and company operations.</p>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Revenue Destination</th><th>Approximate Share</th></tr></thead>
@@ -413,7 +426,7 @@
         </tbody>
       </table>
     </div>
-    <p>Critics have long argued that the creator cut is too small given Roblox's dependence on user-generated content. The recent DevEx rate increase was a partial concession to those concerns, and Roblox has added supplementary income streams — including <strong>Rewarded Video Ads</strong>, <strong>Regional Pricing</strong>, <strong>Creator Rewards</strong>, and <strong>in-experience subscriptions</strong> — to give developers more ways to monetize beyond simple Robux transactions.</p>
+    <p>Critics have long argued that the creator cut is too small given Roblox's dependence on user-generated content. The recent DevEx rate increase was a partial concession to those concerns. Roblox has also added supplementary income streams including <strong>Rewarded Video Ads</strong>, <strong>Regional Pricing</strong>, <strong>Creator Rewards</strong>, and <strong>in-experience subscriptions</strong>.</p>
     <h3>New Monetization Streams (2025–2026)</h3>
     <div class="feature-grid">
       <div class="feature-card"><span class="feature-icon">📺</span><div class="feature-title">Rewarded Video Ads</div><p class="feature-desc">Players watch short video ads in exchange for in-game rewards. Completion rates exceed 80%, and developers earn ad revenue on top of Robux. Over 100 publishers adopted this, with adoption accelerating into 2026.</p></div>
@@ -427,7 +440,7 @@
 
   <div class="section" id="popular-games">
     <h2><span class="emoji">🏆</span>Most Popular Roblox Games of All Time</h2>
-    <p>With 44 million experiences on the platform, the question of which games are most popular is genuinely fascinating. Roblox measures popularity primarily in <strong>total lifetime visits</strong> and <strong>peak concurrent players</strong>. The all-time charts reveal a lot about what players actually want from the platform.</p>
+    <p>With 44 million experiences on the platform, the question of which games are most popular is genuinely fascinating. Roblox measures popularity primarily in <strong>total lifetime visits</strong> and <strong>peak concurrent players</strong>.</p>
     <div class="table-wrap">
       <table>
         <thead><tr><th>#</th><th>Game</th><th>Genre</th><th>All-Time Visits</th><th>Notes</th></tr></thead>
@@ -443,16 +456,16 @@
     </div>
     <div class="callout info">
       <span class="callout-icon">📊</span>
-      <div><strong>Record Alert:</strong> <em>Steal a Brainrot</em> set an extraordinary record in September 2025 — 25.4 million simultaneous players inside a single game. No other game, on any platform, has ever recorded that many concurrent users in a single title at one moment. For context, that is more people playing one game simultaneously than the population of Australia.</div>
+      <div><strong>Record Alert:</strong> <em>Steal a Brainrot</em> set an extraordinary record in September 2025 with 25.4 million simultaneous players inside a single game. No other game, on any platform, has ever recorded that many concurrent users in a single title at one moment. For context, that is more people than the entire population of Australia.</div>
     </div>
-    <p>What the chart above reveals is that <strong>social role-play and simulation games dominate</strong> over traditional "win/lose" competitive titles. Roblox players use these games the way previous generations used public parks or shopping malls — as places to hang out, express identity, and maintain friendships rather than purely to compete or progress through levels. This social function is what makes Roblox's engagement numbers so durable. Players do not just burn through content; they return to the same handful of games for years.</p>
+    <p>What the chart above reveals is that <strong>social role-play and simulation games dominate</strong> over traditional competitive titles. Roblox players use these games the way previous generations used public parks or shopping malls, as places to hang out, express identity, and maintain friendships rather than purely to compete. This social function is what makes Roblox's engagement numbers so durable.</p>
   </div>
 
   <div class="section-divider"></div>
 
   <div class="section" id="platforms">
     <h2><span class="emoji">📱</span>What Devices Can You Play Roblox On?</h2>
-    <p>One of Roblox's defining advantages is its genuinely cross-platform nature. A game built in Roblox Studio is automatically compatible with every supported platform simultaneously — no extra development work required. This "build once, publish everywhere" approach is a major reason the platform has reached audiences in more than 200 countries.</p>
+    <p>One of Roblox's defining advantages is its genuinely cross-platform nature. A game built in Roblox Studio is automatically compatible with every supported platform simultaneously, no extra development work required. This "build once, publish everywhere" approach is a major reason the platform has reached audiences in more than 200 countries.</p>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Platform</th><th>Access Method</th><th>Notes</th></tr></thead>
@@ -460,7 +473,7 @@
           <tr><td>🖥️ <strong>Windows PC</strong></td><td>Roblox app (free download)</td><td>Best performance; required for Roblox Studio</td></tr>
           <tr><td>🍎 <strong>Mac</strong></td><td>Roblox app (free download)</td><td>Roblox Studio available; good performance</td></tr>
           <tr><td>📱 <strong>iOS (iPhone/iPad)</strong></td><td>App Store</td><td>Largest single source of new users globally</td></tr>
-          <tr><td>🤖 <strong>Android</strong></td><td>Google Play Store</td><td>Dominant in emerging markets like India, Indonesia</td></tr>
+          <tr><td>🤖 <strong>Android</strong></td><td>Google Play Store</td><td>Dominant in emerging markets like India and Indonesia</td></tr>
           <tr><td>🎮 <strong>Xbox One / Series X|S</strong></td><td>Microsoft Store</td><td>Controller support; no Studio on console</td></tr>
           <tr><td>🥽 <strong>Meta Quest VR</strong></td><td>Meta Quest Store</td><td>Spatial voice; limited game library in VR mode</td></tr>
           <tr><td>🌐 <strong>Browser (limited)</strong></td><td>roblox.com</td><td>Some features require the installed app</td></tr>
@@ -474,15 +487,15 @@
 
   <div class="section" id="safety">
     <h2><span class="emoji">🛡️</span>Roblox Safety: What Parents Need to Know</h2>
-    <p>No honest guide to Roblox can skip the safety question. The platform is used by hundreds of millions of children, and Roblox has faced significant criticism — including multiple lawsuits and regulatory pressure — over its handling of inappropriate content, predatory behavior, and insufficient parental controls in earlier years. The company has responded with a wave of safety investments that have meaningfully changed the experience, though no platform of this scale is without risk.</p>
+    <p>No honest guide to Roblox can skip the safety question. The platform is used by hundreds of millions of children, and Roblox has faced significant criticism, including multiple lawsuits and regulatory pressure, over its handling of inappropriate content and predatory behavior in earlier years. The company has responded with a wave of safety investments that have meaningfully changed the experience, though no platform of this scale is without risk.</p>
     <h3>The Current Safety Architecture</h3>
-    <p>As of 2026, Roblox's safety systems are more sophisticated than at any point in the platform's history. Roblox has shipped over <strong>100 safety initiatives</strong> since January 2025 alone. Here is what the system looks like today:</p>
+    <p>As of 2026, Roblox's safety systems are more sophisticated than at any point in the platform's history. Roblox has shipped over <strong>100 safety initiatives</strong> since January 2025 alone.</p>
     <div class="feature-grid">
       <div class="feature-card"><span class="feature-icon">🔞</span><div class="feature-title">Age-Based Account Types</div><p class="feature-desc">In April 2026, Roblox introduced <strong>Roblox Kids</strong> (ages 5–8) and <strong>Roblox Select</strong> (ages 9–15), with tightly controlled content access tied to verified age.</p></div>
-      <div class="feature-card"><span class="feature-icon">👨‍👩‍👧</span><div class="feature-title">Parental Controls Dashboard</div><p class="feature-desc">Parents can view their child's friends list, set daily spending limits, see exactly what games they play, and restrict individual titles — all without needing the child's device.</p></div>
+      <div class="feature-card"><span class="feature-icon">👨‍👩‍👧</span><div class="feature-title">Parental Controls Dashboard</div><p class="feature-desc">Parents can view their child's friends list, set daily spending limits, see exactly what games they play, and restrict individual titles, all without needing the child's device.</p></div>
       <div class="feature-card"><span class="feature-icon">🤖</span><div class="feature-title">Roblox Sentinel AI</div><p class="feature-desc">An open-source AI system built specifically to detect early signals of child endangerment by analyzing chat patterns, avatar behavior, and in-game interactions in real time.</p></div>
       <div class="feature-card"><span class="feature-icon">🗣️</span><div class="feature-title">Chat Restrictions Under 13</div><p class="feature-desc">Players under 13 cannot send direct messages outside of games. In-game messages default to broadcast-only mode and are filtered by both AI and human moderation.</p></div>
-      <div class="feature-card"><span class="feature-icon">🧑‍💻</span><div class="feature-title">Multimodal Moderation</div><p class="feature-desc">Roblox can evaluate problematic text, 3D drawings, and avatar movements together in real time — shutting down a specific server immediately before children encounter harmful content.</p></div>
+      <div class="feature-card"><span class="feature-icon">🧑‍💻</span><div class="feature-title">Multimodal Moderation</div><p class="feature-desc">Roblox can evaluate problematic text, 3D drawings, and avatar movements together in real time, shutting down a specific server immediately before children encounter harmful content.</p></div>
       <div class="feature-card"><span class="feature-icon">✅</span><div class="feature-title">Age Verification</div><p class="feature-desc">An expanded age verification rollout limits direct communication between adults and users under 16, with trusted-connection systems replacing open-friend messaging for teens.</p></div>
     </div>
     <div class="callout danger">
@@ -495,49 +508,49 @@
 
   <div class="section" id="ai-future">
     <h2><span class="emoji">🤖</span>AI and the Future of Roblox</h2>
-    <p>Roblox's most ambitious bet right now is artificial intelligence — not as a gimmick or marketing talking point, but as the fundamental architecture for the next generation of the platform. The company's public roadmap is among the most detailed and technically specific AI strategies of any consumer technology company, and it is already producing results that players can see.</p>
+    <p>Roblox's most ambitious bet right now is artificial intelligence, not as a gimmick or marketing talking point, but as the fundamental architecture for the next generation of the platform. The company's public roadmap is among the most detailed and technically specific AI strategies of any consumer technology company, and it is already producing results that players can see.</p>
     <h3>Roblox Cube: The AI Brain Behind the Platform</h3>
-    <p>Announced and launched in March 2025, <strong>Roblox Cube</strong> is the company's core generative AI system for 3D and 4D content. Cube is not a bolted-on third-party model — it is a foundation model trained specifically on the visual and physical language of Roblox's game world. The company open-sourced the Cube 3D foundational model, allowing external researchers to build on it.</p>
-    <p>In February 2026, Roblox extended Cube into <strong>4D generation</strong> — creating not just objects, but objects that <em>behave correctly</em> under the game's physics engine from the moment they are generated. During early access, over 160,000 game objects were generated using the Cube API, and Roblox reported that games using AI-generated assets showed a 64% increase in average player time. That is an extraordinary signal about content quality.</p>
+    <p>Announced and launched in March 2025, <strong>Roblox Cube</strong> is the company's core generative AI system for 3D and 4D content. Cube is not a bolted-on third-party model. It is a foundation model trained specifically on the visual and physical language of Roblox's game world. The company open-sourced the Cube 3D foundational model, allowing external researchers to build on it.</p>
+    <p>In February 2026, Roblox extended Cube into <strong>4D generation</strong>, creating not just objects, but objects that behave correctly under the game's physics engine from the moment they are generated. During early access, over 160,000 game objects were generated using the Cube API, and Roblox reported that games using AI-generated assets showed a 64% increase in average player time.</p>
     <h3>The Agentic AI Future</h3>
-    <p>In April 2026, Roblox announced <strong>Planning Mode</strong> — an agentic AI capability for Studio where a developer describes their intended game in natural language, and the AI breaks it into executable subtasks, implements each one, runs playtests, reads error logs, and fixes problems autonomously. The system is self-correcting: it cycles through planning, building, testing, and refinement with decreasing human intervention over time.</p>
+    <p>In April 2026, Roblox announced <strong>Planning Mode</strong>, an agentic AI capability for Studio where a developer describes their intended game in natural language and the AI breaks it into executable subtasks, implements each one, runs playtests, reads error logs, and fixes problems autonomously.</p>
     <div class="callout info">
       <span class="callout-icon">🔮</span>
-      <div><strong>The Long-Term Vision:</strong> Roblox's stated goal is a world where any person — regardless of coding skill — can describe a game in natural language and have AI produce a fully functional, playable experience complete with custom assets, physics, environments, and interactions. Given the pace of progress in 2025–2026, this is likely achievable within the next two to three years.</div>
+      <div><strong>The Long-Term Vision:</strong> Roblox's stated goal is a world where any person, regardless of coding skill, can describe a game in natural language and have AI produce a fully functional, playable experience. Given the pace of progress in 2025 and 2026, this is likely achievable within the next two to three years.</div>
     </div>
     <h3>Real-Time Translation</h3>
-    <p>One of the more quietly impactful AI features is <strong>real-time in-experience translation</strong>. A game built by a developer in Brazil now automatically displays its UI text in Japanese, Arabic, or Swahili for players in those regions — with no effort from the creator. This has profound implications for the platform's international growth story. Games no longer need localization budgets to be globally accessible. This is part of what is driving Roblox's explosive growth in Japan (+160% bookings YoY), India (+110%), and Indonesia (+700%) in Q4 2025, momentum that has carried into 2026.</p>
+    <p>One of the more quietly impactful AI features is <strong>real-time in-experience translation</strong>. A game built by a developer in Brazil now automatically displays its UI text in Japanese, Arabic, or Swahili for players in those regions, with no effort from the creator. This has profound implications for the platform's international growth story. Games no longer need localization budgets to be globally accessible.</p>
     <h3>AI Safety</h3>
-    <p>Roblox is also applying AI to the moderation challenge at scale. The PII Classifier detects attempts to share personal information in chat. The voice safety classifier identifies policy violations in real-time audio across multiple languages. Roblox Sentinel runs behavioral pattern analysis to flag potential grooming activity before any report is filed. These safety AI systems represent a genuinely novel use of machine learning — applied not to generate content, but to protect the 150 million people using it every day.</p>
+    <p>Roblox is also applying AI to the moderation challenge at scale. The PII Classifier detects attempts to share personal information in chat. The voice safety classifier identifies policy violations in real-time audio across multiple languages. Roblox Sentinel runs behavioral pattern analysis to flag potential grooming activity before any report is filed.</p>
   </div>
 
   <div class="section-divider"></div>
 
   <div class="section" id="faq">
     <h2><span class="emoji">❓</span>Frequently Asked Questions</h2>
-    <div class="faq-item"><div class="faq-q">Is Roblox free to play?</div><p class="faq-a">Yes, completely. Downloading Roblox and playing the vast majority of its games costs nothing. Spending money (via Robux) is optional and used for cosmetic customization, game passes, and premium features. Roblox has never charged a subscription to access the basic platform.</p></div>
-    <div class="faq-item"><div class="faq-q">Is Roblox safe for young children?</div><p class="faq-a">With proper setup, yes — Roblox has robust parental controls, age-based account tiers (Roblox Kids for ages 5–8), and AI-powered moderation. Common Sense Media recommends it for ages 13+ without parental involvement, and for younger children with active supervision and restricted account settings. Using the Family Controls dashboard at roblox.com/parents is strongly recommended.</p></div>
-    <div class="faq-item"><div class="faq-q">What is the difference between Roblox and Minecraft?</div><p class="faq-a">Both platforms let users build things, but they are quite different in scope. Minecraft is a single survival/creative game with a mod community. Roblox is a full platform hosting millions of distinct games in every genre imaginable — most of which have nothing to do with building. Roblox also has a robust monetization economy and social platform layer that Minecraft does not replicate.</p></div>
-    <div class="faq-item"><div class="faq-q">How old do you have to be to play Roblox?</div><p class="faq-a">Roblox officially requires users to be at least 4 years old to create an account, though parental guidance is recommended for young children. The platform has no strict upper age limit; the fastest-growing demographic as of 2026 is users aged 17–24. To access certain features like voice chat, users must be at least 13 and verify their age.</p></div>
-    <div class="faq-item"><div class="faq-q">Can you make real money on Roblox?</div><p class="faq-a">Yes, through the Developer Exchange (DevEx) program. Creators who earn Robux through their games, UGC items, or other in-platform activity can convert them to real-world currency (approximately $0.0035 per Robux). Through 2025 into 2026, Roblox has paid over $1.5 billion to creators via DevEx. However, reaching the minimum payout threshold requires a meaningful audience — most casual hobbyist developers never cash out.</p></div>
-    <div class="faq-item"><div class="faq-q">What happened with free Robux generators?</div><p class="faq-a">They are all scams — without exception. Roblox's system does not allow any third-party tool to add Robux to an account without an authorized purchase. Sites and videos claiming to offer free Robux are phishing operations designed to steal login credentials or personal information. Roblox cannot recover accounts compromised this way, so users should avoid them entirely.</p></div>
-    <div class="faq-item"><div class="faq-q">What is Roblox Premium?</div><p class="faq-a">Roblox Premium is an optional monthly subscription that grants members a recurring Robux stipend each month (the amount varies by tier), a 10% bonus on all Robux purchases, access to the Premium Marketplace, and the ability to trade limited items with other Premium members. It is not required to play any game on the platform.</p></div>
-    <div class="faq-item"><div class="faq-q">What programming language does Roblox use?</div><p class="faq-a">Roblox uses <strong>Luau</strong>, a modified version of the Lua scripting language, enhanced with optional static typing, improved performance, and tighter integration with Roblox's engine. Luau is beginner-friendly and is often many young developers' first exposure to programming — a fact Roblox takes seriously as part of its educational identity.</p></div>
-    <div class="faq-item"><div class="faq-q">How many games are on Roblox?</div><p class="faq-a">As of 2026, Roblox hosts over 44 million distinct games and experiences. The vast majority are hobbyist projects with small audiences, but thousands have millions of regular players. New games are published every day, and the catalogue grows continuously.</p></div>
+    <div class="faq-item"><div class="faq-q">Is Roblox free to play?</div><p class="faq-a">Yes, completely. Downloading Roblox and playing the vast majority of its games costs nothing. Spending money via Robux is optional and used for cosmetic customization, game passes, and premium features. Roblox has never charged a subscription to access the basic platform.</p></div>
+    <div class="faq-item"><div class="faq-q">Is Roblox safe for young children?</div><p class="faq-a">With proper setup, yes. Roblox has robust parental controls, age-based account tiers (Roblox Kids for ages 5–8), and AI-powered moderation. Common Sense Media recommends it for ages 13+ without parental involvement, and for younger children with active supervision and restricted account settings. Using the Family Controls dashboard at roblox.com/parents is strongly recommended.</p></div>
+    <div class="faq-item"><div class="faq-q">What is the difference between Roblox and Minecraft?</div><p class="faq-a">Both platforms let users build things, but they are quite different in scope. Minecraft is a single survival and creative game with a mod community. Roblox is a full platform hosting millions of distinct games in every genre imaginable. Roblox also has a robust monetization economy and social platform layer that Minecraft does not replicate.</p></div>
+    <div class="faq-item"><div class="faq-q">How old do you have to be to play Roblox?</div><p class="faq-a">Roblox officially requires users to be at least 4 years old to create an account, though parental guidance is recommended for young children. The platform has no strict upper age limit. The fastest-growing demographic as of 2026 is users aged 17 to 24. To access certain features like voice chat, users must be at least 13 and verify their age.</p></div>
+    <div class="faq-item"><div class="faq-q">Can you make real money on Roblox?</div><p class="faq-a">Yes, through the Developer Exchange (DevEx) program. Creators who earn Robux through their games, UGC items, or other in-platform activity can convert them to real-world currency at approximately $0.0035 per Robux. Through 2025 into 2026, Roblox has paid over $1.5 billion to creators via DevEx. However, reaching the minimum payout threshold requires a meaningful audience, and most casual hobbyist developers never cash out.</p></div>
+    <div class="faq-item"><div class="faq-q">What happened with free Robux generators?</div><p class="faq-a">They are all scams without exception. Roblox's system does not allow any third-party tool to add Robux to an account without an authorized purchase. Sites and videos claiming to offer free Robux are phishing operations designed to steal login credentials or personal information. Roblox cannot recover accounts compromised this way, so users should avoid them entirely.</p></div>
+    <div class="faq-item"><div class="faq-q">What is Roblox Premium?</div><p class="faq-a">Roblox Premium is an optional monthly subscription that grants members a recurring Robux stipend each month, a 10% bonus on all Robux purchases, access to the Premium Marketplace, and the ability to trade limited items with other Premium members. It is not required to play any game on the platform.</p></div>
+    <div class="faq-item"><div class="faq-q">What programming language does Roblox use?</div><p class="faq-a">Roblox uses <strong>Luau</strong>, a modified version of the Lua scripting language, enhanced with optional static typing, improved performance, and tighter integration with Roblox's engine. Luau is beginner-friendly and is often many young developers' first exposure to programming.</p></div>
+    <div class="faq-item"><div class="faq-q">How many games are on Roblox?</div><p class="faq-a">As of 2026, Roblox hosts over 44 million distinct games and experiences. The vast majority are hobbyist projects with small audiences, but thousands have millions of regular players. New games are published every day and the catalogue grows continuously.</p></div>
   </div>
 
   <div class="conclusion">
     <h2>The Bottom Line</h2>
-    <p style="font-size:17px;color:var(--text-muted);max-width:680px;margin:0 auto 18px;">Roblox is not a trend, and it is not "just for kids." It is the most ambitious and arguably the most successful attempt anyone has ever made to build a shared digital universe at consumer scale.</p>
-    <p style="font-size:17px;color:var(--text-muted);max-width:680px;margin:0 auto 18px;">With 150 million daily users, $4.9 billion in annual revenue, $1.5 billion paid to creators, and an AI roadmap that could genuinely change what it means to make a video game, Roblox in 2026 is a more remarkable story than most people outside the gaming world appreciate. Whether you are a parent trying to understand what your child does for hours every day, a developer evaluating whether to build on the platform, or simply a curious person who keeps seeing the name, the answer to "What is Roblox?" is this: <strong style="color:var(--accent2);">it is the internet's playground, and right now it is growing faster than almost anything else online.</strong></p>
+    <p>Roblox is not a trend, and it is not "just for kids." It is the most ambitious and arguably the most successful attempt anyone has ever made to build a shared digital universe at consumer scale.</p>
+    <p>With 150 million daily users, $4.9 billion in annual revenue, $1.5 billion paid to creators, and an AI roadmap that could genuinely change what it means to make a video game, Roblox in 2026 is a more remarkable story than most people outside the gaming world appreciate. <strong style="color:var(--accent2);">It is the internet's playground, and right now it is growing faster than almost anything else online.</strong></p>
     <div style="margin-top:24px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-      <span class="badge badge-blue">🌐 roblox.com</span>
-      <span class="badge badge-green">🛠️ Free to Play</span>
-      <span class="badge badge-purple">🤖 AI-Powered Creation</span>
-      <span class="badge badge-yellow">💰 $1.5B Paid to Creators</span>
+      <span class="badge badge-blue">roblox.com</span>
+      <span class="badge badge-green">Free to Play</span>
+      <span class="badge badge-purple">AI-Powered Creation</span>
+      <span class="badge badge-yellow">$1.5B Paid to Creators</span>
     </div>
     <div style="margin-top:24px;">
-      <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;background:rgba(79,209,197,0.1);border:1px solid var(--accent2);color:var(--accent2);font-family:var(--heading-font);font-size:13px;font-weight:700;letter-spacing:1px;padding:12px 24px;border-radius:8px;text-decoration:none;transition:all 0.2s;">🏠 Back to Codes Hub</a>
+      <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;background:rgba(79,209,197,0.1);border:1px solid var(--accent2);color:var(--accent2);font-family:var(--heading-font);font-size:13px;font-weight:700;letter-spacing:0.04em;padding:12px 24px;border-radius:8px;text-decoration:none;transition:all 0.2s;">Back to Homepage</a>
     </div>
   </div>
 
